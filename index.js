@@ -119,7 +119,7 @@ app.put('/api/persons/:id', (request, response) => {
     }
     person.number = params.number
     persons = persons.filter(person => person.id !== id)
-    persons.concat(person)
+    persons = persons.concat(person)
     response.json(person)
 })
 
